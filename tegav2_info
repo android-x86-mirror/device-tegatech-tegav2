@@ -7,7 +7,7 @@ tegav2_info()
 		TEGA*|VPAD10*)
 			#BOARD_USES_TSLIB=true
 			# FIXME: a workaround for the race condition of auto-probing
-			EXTMOD="$EXTMOD hid-hanvon ath3k"
+			EXTMOD="$EXTMOD hid-multitouch"
 			mkdir /android/mnt/USB
 			chown 1000.1015 /android/mnt/USB # system.sdcard_rw
 			btn_switch 0x0 0x1 > /dev/null

@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
-# Linux/x86 2.6.38-rc7 Kernel Configuration
-# Mon Mar 21 18:21:24 2011
+# Linux/x86 2.6.38 Kernel Configuration
+# Wed Apr  6 13:25:16 2011
 #
 # CONFIG_64BIT is not set
 CONFIG_X86_32=y
@@ -1825,19 +1825,16 @@ CONFIG_USB_HID=y
 #
 # Special HID drivers
 #
-# CONFIG_HID_3M_PCT is not set
 # CONFIG_HID_A4TECH is not set
 # CONFIG_HID_ACRUX_FF is not set
 # CONFIG_HID_APPLE is not set
 # CONFIG_HID_BELKIN is not set
-# CONFIG_HID_CANDO is not set
 # CONFIG_HID_CHERRY is not set
 # CONFIG_HID_CHICONY is not set
 # CONFIG_HID_PRODIKEYS is not set
 # CONFIG_HID_CYPRESS is not set
 # CONFIG_HID_DRAGONRISE is not set
 # CONFIG_HID_EMS_FF is not set
-# CONFIG_HID_EGALAX is not set
 # CONFIG_HID_ELECOM is not set
 # CONFIG_HID_EZKEY is not set
 # CONFIG_HID_KYE is not set
@@ -1851,7 +1848,7 @@ CONFIG_USB_HID=y
 # CONFIG_HID_MICROSOFT is not set
 # CONFIG_HID_MOSART is not set
 # CONFIG_HID_MONTEREY is not set
-# CONFIG_HID_MULTITOUCH is not set
+CONFIG_HID_MULTITOUCH=m
 # CONFIG_HID_NTRIG is not set
 # CONFIG_HID_ORTEK is not set
 # CONFIG_HID_PANTHERLORD is not set
@@ -1864,7 +1861,6 @@ CONFIG_USB_HID=y
 # CONFIG_HID_ROCCAT_PYRA is not set
 # CONFIG_HID_SAMSUNG is not set
 # CONFIG_HID_SONY is not set
-# CONFIG_HID_STANTUM is not set
 # CONFIG_HID_SUNPLUS is not set
 # CONFIG_HID_GREENASIA is not set
 # CONFIG_HID_SMARTJOYPLUS is not set
@@ -1873,7 +1869,6 @@ CONFIG_USB_HID=y
 # CONFIG_HID_WACOM is not set
 # CONFIG_HID_ZEROPLUS is not set
 # CONFIG_HID_ZYDACRON is not set
-CONFIG_HID_HANVON=m
 CONFIG_USB_SUPPORT=y
 CONFIG_USB_ARCH_HAS_HCD=y
 CONFIG_USB_ARCH_HAS_OHCI=y
@@ -2090,9 +2085,9 @@ CONFIG_RTC_DEBUG=y
 CONFIG_RTC_INTF_SYSFS=y
 CONFIG_RTC_INTF_PROC=y
 CONFIG_RTC_INTF_DEV=y
+# CONFIG_RTC_INTF_DEV_UIE_EMUL is not set
 CONFIG_RTC_INTF_ALARM=y
 CONFIG_RTC_INTF_ALARM_DEV=y
-# CONFIG_RTC_INTF_DEV_UIE_EMUL is not set
 # CONFIG_RTC_DRV_TEST is not set
 
 #
