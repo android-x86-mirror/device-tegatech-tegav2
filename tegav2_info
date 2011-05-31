@@ -4,7 +4,7 @@ tegav2_info()
 {
 	board=`cat $DMIPATH/product_name`
 	case "$board" in
-		TEGA*|VPAD10*|X1*)
+		TEGA*|VPAD10*|X1*|PC*)
 			#BOARD_USES_TSLIB=true
 			# FIXME: a workaround for the race condition of auto-probing
 			EXTMOD="$EXTMOD hid-multitouch"
@@ -22,7 +22,7 @@ tegav2_info()
 detect_hardware()
 {
 	case "`cat $DMIPATH/uevent`" in
-		*TEGA*|*VPAD10*|*azpen*)
+		*TEGA*|*VPAD10*|*azpen*|*AZPENPC*)
 			tegav2_info
 			;;
 		*)
@@ -35,7 +35,7 @@ post_detect()
 {
 	board=`cat $DMIPATH/product_name`
 	case "$board" in
-		X1*)
+		X1*|PC*)
 			echo 3 03eb 201c 1 > /sys/module/hid_multitouch/drivers/hid:hid-multitouch/new_id
 			;;
 		*)
