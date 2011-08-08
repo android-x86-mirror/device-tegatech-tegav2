@@ -18,4 +18,5 @@
 -->
 <devices>
     <device name="AT Translated Set 2 keyboard" />
+    <device name="Power Button" />
 </devices>
