@@ -1,5 +1,5 @@
 LOCAL_PATH := $(call my-dir)
-LOCAL_FIRMWARES := ath3k-2.fw
+LOCAL_FIRMWARES := ath3k-1.fw
 TARGET_INITRD_SCRIPTS := $(LOCAL_PATH)/tegav2_info
 TARGET_KERNEL_CONFIG := $(LOCAL_PATH)/tegav2_defconfig
 
