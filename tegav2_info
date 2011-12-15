@@ -4,7 +4,7 @@ tegav2_info()
 {
 	board=`cat $DMIPATH/product_name`
 	case "$board" in
-		TEGA*|VPAD10*|X1*|PC*)
+		TEGA*|VPAD10*|X1*|PC*|Intel*)
 			;;
 		*)
 			error WARNING: An unknown model
@@ -22,7 +22,7 @@ tegav2_info()
 detect_hardware()
 {
 	case "`cat $DMIPATH/uevent`" in
-		*TEGA*|*VPAD10*|*azpen*|*AZPENPC*)
+		*TEGA*|*VPAD10*|*azpen*|*AZPENPC*|Intel*)
 			;;
 		*)
 			error WARNING: An unknown tablet
