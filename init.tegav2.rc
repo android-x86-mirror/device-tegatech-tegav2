@@ -5,10 +5,3 @@ on boot
     setprop rild.libargs "-d /dev/ttyUSB2"
 
     exec /system/bin/io_switch 0x0 0x1
-
-service amixer /system/bin/alsa_amixer set Master 100
-    oneshot
-    disabled
-
-on property:dev.bootcomplete=1
-    start amixer
