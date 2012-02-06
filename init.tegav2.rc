@@ -2,8 +2,6 @@ on init
     mkdir /mnt/MicroSD 0000 system system
 
 on boot
-    chown system system /sys/class/backlight/acpi_video0/brightness
-
     setprop rild.libpath /system/lib/libreference-ril.so
     setprop rild.libargs "-d /dev/ttyUSB2"
 
