@@ -20,7 +20,7 @@ tegav2_info()
 detect_hardware()
 {
 	case "`cat $DMIPATH/uevent`" in
-		*TEGA*|*Intel*|*WeTab*|*VPAD10*|*azpen*|*AZPENPC*)
+		*TEGA*|*Intel*|*Lucid*|*WeTab*|*VPAD10*|*azpen*|*AZPENPC*)
 			;;
 		*)
 			error WARNING: An unknown tablet
