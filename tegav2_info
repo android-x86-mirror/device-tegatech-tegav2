@@ -4,12 +4,15 @@ tegav2_info()
 {
 	board=`cat $DMIPATH/product_name`
 	case "$board" in
-		TEGA*|Intel*|WeTab*|VPAD10*|X1*|PC*)
+		TEGA*|Intel*|WeTab*|VPAD10*|X1*|PC*|CedarTrail*)
 			TOUCH=hid-multitouch
 			;;
-		*Q550)
+		*Q550|Latitude*ST)
 			TOUCH=hid-ntrig
 			UVESA_MODE=${UVESA_MODE:-1280x800}
+			;;
+		ET1602*)
+			TOUCH=
 			;;
 		*)
 			TOUCH=hid-multitouch
@@ -26,7 +29,7 @@ tegav2_info()
 detect_hardware()
 {
 	case "`cat $DMIPATH/uevent`" in
-		*TEGA*|*Q550*|*Intel*|*Lucid*|*WeTab*|*VPAD10*|*azpen*|*AZPENPC*)
+		*TEGA*|*Q550*|*Intel*|*Lucid*|*WeTab*|*VPAD10*|*azpen*|*AZPENPC*|*ET1602*|*LatitudeST*)
 			;;
 		*)
 			error WARNING: An unknown tablet
@@ -42,6 +45,9 @@ post_detect()
 	case "$board" in
 		X1*|PC*)
 			echo 3 03eb 201c 1 > /sys/module/hid_multitouch/drivers/hid:hid-multitouch/new_id
+			;;
+		CedarTrail*)
+#			echo 3 0306 ff2f 1 > /sys/module/hid_multitouch/drivers/hid:hid-multitouch/new_id
 			;;
 		*)
 			;;
