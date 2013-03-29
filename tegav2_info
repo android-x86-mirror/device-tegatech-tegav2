@@ -13,6 +13,7 @@ tegav2_info()
 			;;
 		ET1602*)
 			TOUCH=
+			echo "debug.drm.mode.force=1366x768" >> default.prop
 			;;
 		*)
 			TOUCH=hid-multitouch
